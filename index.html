@@ -14,13 +14,7 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
     <style>
-        body {
-            background-color: #f8f9fa;
-            font-family: 'Poppins', sans-serif;
-        }
-
         /* HERO section */
         .hero-section {
             position: relative;
@@ -39,88 +33,45 @@
         .hero-text {
             position: absolute;
             top: 50%;
+            /* centre verticalement */
             left: 50%;
+            /* centre horizontalement */
             transform: translate(-50%, -50%);
             color: white;
             text-align: center;
+            padding: 0 15px;
+            /* pour le confort sur petits écrans */
+            max-width: 90%;
+            /* éviter débordement */
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
+        /* Ajustements mobiles */
+        @media (max-width: 767px) {
+            .hero-section {
+                height: 300px;
+                /* un peu moins haut sur mobile */
             }
 
-            to {
-                opacity: 1;
+            .hero-text {
+                top: 55%;
+                /* ajuster un peu plus bas pour ne pas être coupé */
+                font-size: 1rem;
+                /* réduire la taille du texte */
+                width: 355px;
+                padding: 0 10px;
             }
-        }
 
-        /* Cards */
-        .pack-title {
-            font-weight: bold;
-            color: #004085;
-        }
-
-        .card {
-            border-radius: 1rem;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 1s forwards;
-        }
-
-        .card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .card:hover {
-            transform: scale(1.03);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            .hero-text h1 {
+                font-size: 1.5rem;
+                /* titre plus petit sur mobile */
+                line-height: 1.2;
             }
-        }
 
-        .card:nth-child(1) {
-            animation-delay: 0.2s;
-        }
-
-        .card:nth-child(2) {
-            animation-delay: 0.4s;
-        }
-
-        .card:nth-child(3) {
-            animation-delay: 0.6s;
-        }
-
-        .card:nth-child(4) {
-            animation-delay: 0.8s;
-        }
-
-        /* CTA Section */
-        .cta {
-            background-color: #ffc107;
-            padding: 2rem;
-            border-radius: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .cta:hover {
-            background-color: #e0a800;
-            transform: scale(1.02);
-        }
-
-        footer {
-            animation: fadeIn 1s ease-in 1s forwards;
-            opacity: 0;
+            .hero-text p {
+                font-size: 0.9rem;
+                /* texte plus petit aussi */
+                margin-top: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -130,7 +81,7 @@
     <section class="hero-section">
         <img src="contexte-de-programmation-avec-une-personne-travaillant-avec-des-codes-sur-ordinateur.jpg"
             alt="Bannière Omega Life">
-        <div class="hero-text px-3">
+        <div class="hero-text pt-5 px-3">
             <h1 class="display-4 fw-bold">Formez-vous au centre numérique <span class="text-warning">Omega Life</span>
             </h1>
             <p class="lead mt-2">
@@ -215,7 +166,7 @@
                         <h5 class="pack-title">4. PACK TECH & INNOVATION</h5>
                     </a>
                     <p>Pour aller plus loin et comprendre les technologies de demain :</p>
-                    <ul> 
+                    <ul>
                         <li>Initiation en Informatique, Étude de Windows</li>
                         <li>Dactylographie : saisie rapide</li>
                         <li>Sécurité informatique avancée</li>
@@ -254,14 +205,16 @@
                                 un ordinateur (logiciels fournis)</div>
                             <div><i class="bi bi-clock-history text-dark me-2"></i><strong>Rythme :</strong> Cours :
                                 8h/semaine | Exercices : 4h/semaine</div>
-                            
+
                             <div><i class="bi bi-envelope-fill text-danger me-2"></i><strong>Email :</strong>
                                 contactsomegalife@gmail.com</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-4">
+
+
+            <!--  <div class="text-center mt-4">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDnRoWNks0iHoJlR09RIjBK3OYO0ukF6NKAS3MjPgFsE43ow/viewform"
                     target="_blank" class="btn btn-primary btn-lg px-4 py-2 shadow-sm"
                     style="transition: all 0.3s ease;">
@@ -274,8 +227,39 @@
                 <a href="https://wa.me/2290169698122" class="btn btn-success btn-sm mt-2" target="_blank">
                     <i class="bi bi-whatsapp me-1"></i> Discuter sur WhatsApp
                 </a>
+            </div> -->
+        </section>
+        <!-- contacts -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <!-- Bouton Préinscription -->
+                    <div class="col-12 col-md-6 mb-3">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDnRoWNks0iHoJlR09RIjBK3OYO0ukF6NKAS3MjPgFsE43ow/viewform"
+                            target="_blank" class="btn btn-primary btn-lg px-4 py-2 shadow-sm w-100"
+                            style="transition: all 0.3s ease;">
+                            <i class="bi bi-pencil-square me-2"></i> Je me préinscris maintenant
+                        </a>
+                    </div>
+
+                    <!-- Bouton WhatsApp + Contact -->
+                    <div class="col-12 col-md-6">
+                        <p class="mb-2 text-secondary">
+                            Besoin d’aide ? Appelez ou envoyez un message au <br>
+                            <strong class="text-dark">+229 01 69 69 8122</strong>.
+                        </p>
+                        <a href="https://wa.me/2290169698122" class="btn btn-success btn-sm px-4 py-2 shadow-sm"
+                            target="_blank">
+                            <i class="bi bi-whatsapp me-1"></i> Discuter sur WhatsApp
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
+
+
+
+
     </main>
 
     <!-- Footer -->

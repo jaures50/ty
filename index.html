@@ -14,8 +14,8 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    
+
+
     <!-- Favicon pour les navigateurs -->
     <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
     <link rel="shortcut icon" href="logo.png" type="image/png">
@@ -92,7 +92,71 @@
                 margin-top: 0.5rem;
             }
         }
+
+        /* HERO section */
+        .hero-section {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .hero-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            padding: 0 15px;
+            max-width: 90%;
+        }
+
+        /* 📌 Correction des images de packs */
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+
+        /* Ajustements mobiles */
+        @media (max-width: 767px) {
+            .hero-section {
+                height: 300px;
+            }
+
+            .hero-text {
+                top: 55%;
+                font-size: 1rem;
+                width: 355px;
+                padding: 0 10px;
+            }
+
+            .hero-text h1 {
+                font-size: 1.5rem;
+                line-height: 1.2;
+            }
+
+            .hero-text p {
+                font-size: 0.9rem;
+                margin-top: 0.5rem;
+            }
+
+            /* 📱 Images plus petites sur mobile */
+            .card img {
+                height: 150px;
+            }
+        }
     </style>
+
 </head>
 
 <body>
@@ -119,11 +183,11 @@
 
             <div class="col-md-6 col-lg-6">
                 <div class="card p-4">
-                    <img src="pack1.jpg" alt="Pack Starter">
+                    <img src="pack1.jpg" alt="Pack Starter"> <br>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDnRoWNks0iHoJlR09RIjBK3OYO0ukF6NKAS3MjPgFsE43ow/viewform"
                         target="_blank">
                         <h5 class="pack-title">1. PACK STARTER NUMÉRIQUE </h5>
-                    </a>
+                    </a> 
 
                     <p>Pour débuter avec assurance et acquérir les bases solides :</p>
                     <ul>
@@ -140,7 +204,7 @@
             <!-- PACK CRÉATEUR WEB & VISUEL -->
             <div class="col-md-6 col-lg-6">
                 <div class="card p-4">
-                    <img src="pack2.jpg" alt="Pack Web & Visuel">
+                    <img src="pack2.jpg" alt="Pack Web & Visuel"> <br>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDnRoWNks0iHoJlR09RIjBK3OYO0ukF6NKAS3MjPgFsE43ow/viewform"
                         target="_blank">
                         <h5 class="pack-title">2. PACK CRÉATEUR WEB & VISUEL</h5>
@@ -160,7 +224,7 @@
             <!-- PACK MULTIMÉDIA & ANIMATION -->
             <div class="col-md-6 col-lg-6">
                 <div class="card py-5 p-4">
-                    <img src="pack3.jpg" alt="Pack Multimédia">
+                    <img src="pack3.jpg" alt="Pack Multimédia"> <br>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDnRoWNks0iHoJlR09RIjBK3OYO0ukF6NKAS3MjPgFsE43ow/viewform"
                         target="_blank">
                         <h5 class="pack-title">3. PACK MULTIMÉDIA & ANIMATION</h5>
@@ -179,7 +243,7 @@
             <!-- PACK TECH & INNOVATION -->
             <div class="col-md-6 col-lg-6">
                 <div class="card p-4">
-                    <img src="pack4.jpg" alt="Pack Tech">
+                    <img src="pack4.jpg" alt="Pack Tech"> <br>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDnRoWNks0iHoJlR09RIjBK3OYO0ukF6NKAS3MjPgFsE43ow/viewform"
                         target="_blank">
                         <h5 class="pack-title">4. PACK TECH & INNOVATION</h5>
